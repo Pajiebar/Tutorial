@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="My Tutorial">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Tutorial">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="etc/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <title> {{ title.page }} My Tutorial </title>
+    <link rel="icon" href=".../pictures/BUILDINGS.png" sizes="16x16" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Song+Myung" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+    
+
+</head>
+
+<!--Body Area-->
+<body>
+
+        <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a href="{{ '/#index.html' | absolute_url }}"  class="nav-link active" >Home</a>
+                            </li>
+                            <li class="nav-item"></li>
+        
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ '/about.html' | absolute_url }}" class="nav-link active">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ '/contact.html' | absolute_url }}" class="nav-link active">Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+</body>
+
+<br>
+</hr>
+
+<!--Footer Area-->
+{{ content }}
+<footer>
+
+        <div class="row footer-text">
+                    <span class="copyright"><a href="http://www.csadministrativefirm.com/" target="_blank">Copyright &copy; CS Administrative Firm 2018</a></span>
+                </div>
+        </div>
+</footer>
+<!--Google Map-->
+<script>
+        function myMap() {
+          var myCenter = new google.maps.LatLng(7.4559625,125.8111454,17);
+          var mapCanvas = document.getElementById("map");
+          var mapOptions = {center: myCenter, zoom: 12};
+          var map = new google.maps.Map(mapCanvas, mapOptions);
+          var marker = new google.maps.Marker({position:myCenter});
+          marker.setMap(map);
+        }
+        </script>
+        
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvLXsVo6ZQMJ18AFxfhWzwsWPvdqMGEsk&callback=myMap"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+</html>
